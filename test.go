@@ -22,6 +22,8 @@ func main() {
 
 	mainNumber = multiplier(mainNumber)
 	fmt.Printf("I am the original num after we called counterPassWithReturn:: %v \n", mainNumber)
+
+	// PUT YOUR NEW FUNCITON CALL HERE
 }
 
 func printer(wordToPrint string) {
@@ -29,37 +31,39 @@ func printer(wordToPrint string) {
 }
 
 func counterReference(num *int) {
-    fmt.Println(num)
+	fmt.Println(num)
 	fmt.Printf("I am no longer a copy of mainNum, I am refrence to mainNum:: %v \n", *num)
 	*num++ // the scope of the variable is local to this function
 	fmt.Printf("I am a reference of mainNum that was increased:: %v \n", *num)
-} 
+}
 
 func counterPass(num int) {
 	fmt.Printf("I am a copy of mainNum:: %v \n", num)
 	num++ // the scope of the variable is local to this function
 	fmt.Printf("I am a copy of mainNum that was increased:: %v \n", num)
-} 
+}
 
 func counterPassWithReturn(num int) int {
 	fmt.Printf("I am a copy of mainNum:: %v \n", num)
 	num++ // the scope of the variable is local to this function
 	fmt.Printf("I am a copy of mainNum that was increased:: %v \n", num)
-	
-	return num;
-	
-} 
+
+	return num
+
+}
 
 func multiplier(num int) int {
-	num = 4*num
+	num = 4 * num
 
 	return num
 }
 
+// Create another function that allows you to multiply any number with the given number
+// and return the answer
 
 /*
 [0][1][2][3]
 x = 0
-y = *x 
+y = *x
 
 */
