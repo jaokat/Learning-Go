@@ -45,6 +45,7 @@ func main() {
 		"pepper",
 		"salt",
 		"turmeric",
+		"pepper",
 	}
 
 	spew.Dump(spices)
@@ -62,12 +63,19 @@ func main() {
 		fmt.Println(veggies[i])
 	}
 
-	for _, spice := range spices {
-		if spice  == "Kat" {
+
+	//range has two vars the index number and the value at that index
+	for _, kat := range spices {
+
+		fmt.Println(kat)
+		if kat  == "pepper" {
 			fmt.Println("I found it!")
-			break
 		}
-		fmt.Println(spice)
+
+		if kat == "salt" {
+			fmt.Println("I found it!")
+		}
+
 	}
 
 
